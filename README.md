@@ -108,6 +108,4 @@ Other things on the list: support for longer documents by increasing chunk count
 
 ---
 
-## License
 
-MIT — use it however you want.
