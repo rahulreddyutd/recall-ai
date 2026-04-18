@@ -48,17 +48,28 @@ Open http://localhost:3001, upload any document, and start asking questions.
 
 ---
 
-## Project layout
+## ## Project layout
 
-    src/
-      api/claude.js          RAG pipeline and Claude API integration
-      components/
-        TopBar.jsx            header with document count
-        UploadPanel.jsx       drag and drop file upload with chunking
-        ChatPanel.jsx         chat interface with markdown rendering
-      utils/documents.js      text extraction, chunking, similarity search
-      App.jsx                 root component with localStorage persistence
-      index.css               dark design system
+recall-ai/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── api/
+│   │   └── claude.js              RAG pipeline and Claude API integration
+│   ├── components/
+│   │   ├── TopBar.jsx             header with document count badge
+│   │   ├── UploadPanel.jsx        drag and drop file upload with chunking
+│   │   └── ChatPanel.jsx          chat interface with markdown rendering
+│   ├── utils/
+│   │   └── documents.js           text extraction, chunking, similarity search
+│   ├── App.jsx                    root component with localStorage persistence
+│   ├── main.jsx                   React entry point
+│   └── index.css                  dark design system
+├── index.html
+├── vite.config.js
+├── package.json
+├── .env.example
+└── .gitignore
 
 ---
 
@@ -86,8 +97,6 @@ The quickest path to a live URL is Vercel:
 2. Go to vercel.com and import the repo
 3. Add VITE_ANTHROPIC_API_KEY under Environment Variables
 4. Deploy
-
-Same note as always — the API key is in the client bundle which is fine for personal use and internal tools. For anything public facing, move the Claude API call to a backend and call that from the frontend instead.
 
 ---
 
