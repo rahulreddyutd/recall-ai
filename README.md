@@ -29,7 +29,7 @@ You need Node 18+ and an Anthropic API key from console.anthropic.com.
 
 Open .env and add your key:
 
-    VITE_ANTHROPIC_API_KEY=sk-ant-your-key-here
+    VITE_ANTHROPIC_API_KEY=add_your_key_here
 
 Start it:
 
